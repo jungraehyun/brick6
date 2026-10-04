@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+
+  <title>NEON BREAKER</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="game-wrapper">
+
+    <!-- =========================
+         HUD
+    ========================== -->
+    <header class="hud">
+
+      <div class="hud-item">
+        <span class="label">SCORE</span>
+        <span id="score">0</span>
+      </div>
+
+      <div class="hud-item">
+        <span class="label">BEST</span>
+        <span id="best">0</span>
+      </div>
+
+      <div class="hud-item">
+        <span class="label">WAVE</span>
+        <span id="wave">1</span>
+      </div>
+
+    </header>
+
+
+    <!-- =========================
+         GAME
+    ========================== -->
+    <main class="game-area">
+
+      <canvas
+        id="gameCanvas"
+        width="1280"
+        height="720"
+      ></canvas>
+
+
+      <!-- TITLE -->
+      <div
+        id="titleScreen"
+        class="overlay"
+      >
+
+        <div class="title-box">
+
+          <h1>NEON BREAKER</h1>
+
+          <p>BREAK ALL THE BLOCKS</p>
+
+          <button id="startButton">
+            START GAME
+          </button>
+
+          <div class="control-text">
+            PC : MOUSE<br />
+            MOBILE : TOUCH / DRAG
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- GAME OVER -->
+      <div
+        id="gameOverScreen"
+        class="overlay hidden"
+      >
+
+        <div class="title-box">
+
+          <h2>GAME OVER</h2>
+
+          <p>
+            SCORE
+            <strong id="finalScore">0</strong>
+          </p>
+
+          <button id="restartButton">
+            RESTART
+          </button>
+
+        </div>
+
+      </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+      <span id="status">
+        READY
+      </span>
+
+      <span>●</span>
+
+      <span id="speedText">
+        SPEED 480
+      </span>
+
+      <span>●</span>
+
+      <span>
+        WAVE
+        <span id="waveFooter">1</span>
+      </span>
+
+    </footer>
+
+  </div>
+
+  <script src="game.js"></script>
+
+</body>
+</html>
